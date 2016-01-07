@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li class="post">
+        <div class="post-wrapper">
+          <div class="post-image">
+            <img src="{{ post.image }}" alt="{{post.title}}"/>
+          </div>
+          <div class="post-excerpt">
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+            <span class="post-meta">{{post.category}}</span>
+
+            {{ post.excerpt}}
+
+            <a href="{{post.url | prepend: site.baseurl }}" class="post-more">read more</a>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+    <li class="post text-center">
+      <a href="{{site.github_username }}" class="post-more">view my github for more</a>
+    </li>
+  </ul>
+
+</div>

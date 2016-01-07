@@ -1,0 +1,158 @@
+@import 'susy';
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+$break-md: 640px;
+$break-lg:1140px;
+
+$color-dark: #28324e;
+$color-light: #FBA026; 
+$color-links: #2969B0;
+
+/* ==============
+ * Typography
+ * ==============*/
+h1,h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+a {
+  color:  $color-links;
+  transition: all .1s linear;
+
+  &:hover {
+    text-decoration: none;
+    color: darken($color-links, 30%);
+  }
+}
+.text-center {
+  text-align:center;
+}
+
+.page-content {
+  padding-bottom: 0;
+}
+.clearfix {
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+// Containers
+.wrapper {
+  @include container;
+}
+.post-wrapper, .container {
+  @include container(960px);
+}
+// Header
+.site-header {
+  background: url('/assets/bg.png');
+  border-top: 5px solid darken($color-dark, 10%);
+  color: #ccc;
+}
+.site-title, .site-title:visited {
+  color: $color-light;
+  &:hover {
+    text-decoration: none;
+    color: #ccc;
+  }
+}
+/* ========================= *
+ *      Font page posts      *
+** ========================= */
+.post-list > li {
+  margin-bottom: 0;
+}
+.post {
+  margin: 0 -30px;
+  padding: 2em 30px;
+}
+h2 .post-link {
+  font-size: 110%;
+  color: $color-links;
+  &:hover {
+    color: darken($color-links, 30%);
+  }
+}
+.post-excerpt {
+  margin-top: 1.5em;
+}
+// Even Posts
+.post:nth-child(even) {
+  background: #EFEFEF;
+
+  .post-image {
+    @media only screen and (min-width: $break-md) {
+      @include span(6 of 12 last);
+    }
+  }
+  .post-excerpt {
+    text-align:center;
+    @media only screen and (min-width: $break-md) {
+      text-align:right;
+      @include span(5 of 12 first);
+    }
+  }
+}
+// Odd Posts
+.post:nth-child(odd) {
+  .post-image {
+    @media only screen and (min-width: $break-md) {
+      @include span(6 of 12 first);
+    }
+  }
+  .post-excerpt {
+    text-align:center;
+    @media only screen and (min-width: $break-md) {
+      text-align:left;
+      @include span(5 of 12 last);
+    }
+  }
+}
+.post-image img {
+    border-radius: 10px;
+    box-shadow: 0 0 3px 1px rgba(0,0,0,0.3);
+    width: 100%;
+}
+a.post-more {
+  display:inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  color: $color-light;
+  border: 1px solid $color-light;
+  border-radius: 10px;
+  transition: all .25s ease-in-out;
+  &:hover {
+    text-decoration:none;
+    background: $color-light;
+    color: #fff;
+  }
+}
+// =======================================================
+
+// Social media links in footer
+ul.social {
+  list-style: none;
+  font-size: 2em;
+  li {
+    float: left;
+    margin-right: 1em;
+  }
+  li:last-child {
+    float: none;
+    margin-right: 0;
+  }
+}
+
+// Navbar links
+.site-nav .page-link {
+  color: #fff;
+}
+
+// Header description
+.site-description {
+  margin: 1.5em 0;
+  line-height: 2em;
+}
