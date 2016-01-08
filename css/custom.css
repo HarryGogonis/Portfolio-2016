@@ -1,0 +1,210 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+/* ==============
+ * Typography
+ * ==============*/
+/* line 14, ../../_compass/custom.scss */
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 17, ../../_compass/custom.scss */
+a {
+  color: #2969B0;
+  transition: all .1s linear;
+}
+/* line 21, ../../_compass/custom.scss */
+a:hover {
+  text-decoration: none;
+  color: #0c1f34;
+}
+
+/* line 26, ../../_compass/custom.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 30, ../../_compass/custom.scss */
+.page-content {
+  padding-bottom: 0;
+}
+
+/* line 34, ../../_compass/custom.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 38, ../../_compass/custom.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 43, ../../_compass/custom.scss */
+.wrapper {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.10/sass/susy/output/support/_clearfix.scss */
+.wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 46, ../../_compass/custom.scss */
+.post-wrapper, .container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../.rvm/gems/ruby-2.2.1/gems/susy-2.2.10/sass/susy/output/support/_clearfix.scss */
+.post-wrapper:after, .container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 50, ../../_compass/custom.scss */
+.site-header {
+  background: url("/assets/bg.png");
+  border-top: 5px solid #171c2c;
+  color: #ccc;
+}
+
+/* line 55, ../../_compass/custom.scss */
+.site-title, .site-title:visited {
+  color: #FBA026;
+}
+/* line 57, ../../_compass/custom.scss */
+.site-title:hover, .site-title:visited:hover {
+  text-decoration: none;
+  color: #ccc;
+}
+
+/* ========================= *
+ *      Font page posts      *
+** ========================= */
+/* line 65, ../../_compass/custom.scss */
+.post-list > li {
+  margin-bottom: 0;
+}
+
+/* line 68, ../../_compass/custom.scss */
+.post {
+  margin: 0 -30px;
+  padding: 2em 30px;
+}
+
+/* line 72, ../../_compass/custom.scss */
+h2 .post-link {
+  font-size: 110%;
+  color: #2969B0;
+}
+/* line 75, ../../_compass/custom.scss */
+h2 .post-link:hover {
+  color: #0c1f34;
+}
+
+/* line 79, ../../_compass/custom.scss */
+.post-excerpt {
+  margin-top: 1.5em;
+}
+
+/* line 83, ../../_compass/custom.scss */
+.post:nth-child(even) {
+  background: #EFEFEF;
+}
+@media only screen and (min-width: 640px) {
+  /* line 86, ../../_compass/custom.scss */
+  .post:nth-child(even) .post-image {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 91, ../../_compass/custom.scss */
+.post:nth-child(even) .post-excerpt {
+  text-align: center;
+}
+@media only screen and (min-width: 640px) {
+  /* line 91, ../../_compass/custom.scss */
+  .post:nth-child(even) .post-excerpt {
+    text-align: right;
+    width: 40.67797%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  /* line 101, ../../_compass/custom.scss */
+  .post:nth-child(odd) .post-image {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+/* line 106, ../../_compass/custom.scss */
+.post:nth-child(odd) .post-excerpt {
+  text-align: center;
+}
+@media only screen and (min-width: 640px) {
+  /* line 106, ../../_compass/custom.scss */
+  .post:nth-child(odd) .post-excerpt {
+    text-align: left;
+    width: 40.67797%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+/* line 114, ../../_compass/custom.scss */
+.post-image img {
+  border-radius: 10px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+/* line 119, ../../_compass/custom.scss */
+a.post-more {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  color: #FBA026;
+  border: 1px solid #FBA026;
+  border-radius: 10px;
+  transition: all .25s ease-in-out;
+}
+/* line 127, ../../_compass/custom.scss */
+a.post-more:hover {
+  text-decoration: none;
+  background: #FBA026;
+  color: #fff;
+}
+
+/* line 136, ../../_compass/custom.scss */
+ul.social {
+  list-style: none;
+  font-size: 2em;
+}
+/* line 139, ../../_compass/custom.scss */
+ul.social li {
+  float: left;
+  margin-right: 1em;
+}
+/* line 143, ../../_compass/custom.scss */
+ul.social li:last-child {
+  float: none;
+  margin-right: 0;
+}
+
+/* line 150, ../../_compass/custom.scss */
+.site-nav .page-link {
+  color: #fff;
+}
+
+/* line 155, ../../_compass/custom.scss */
+.site-description {
+  margin: 1.5em 0;
+  line-height: 2em;
+}

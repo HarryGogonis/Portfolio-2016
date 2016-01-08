@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Harry Gogonis</title>
+    <description>I am a developer who is passionate about building usable and beautiful products. My specialties are **web applications** and **data analysis**
+</description>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 08 Jan 2016 03:12:38 +0000</pubDate>
+    <lastBuildDate>Fri, 08 Jan 2016 03:12:38 +0000</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>MAPN</title>
+        <description>&lt;p&gt;An app for location-based video sharing&lt;/p&gt;
+
+&lt;h2 id=&quot;technologies&quot;&gt;Technologies&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;MongoDB&lt;/li&gt;
+  &lt;li&gt;Express.js&lt;/li&gt;
+  &lt;li&gt;AngularJS&lt;/li&gt;
+  &lt;li&gt;Node&lt;/li&gt;
+  &lt;li&gt;FFmpeg&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
+        <link>http://yourdomain.com/client/web/2014/03/04/Hello-World.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/client/web/2014/03/04/Hello-World.html</guid>
+        
+        
+        <category>client/web</category>
+        
+      </item>
+    
+      <item>
+        <title>JICV</title>
+        <description>&lt;p&gt;A mobile app to view ip camera feeds&lt;/p&gt;
+
+&lt;p&gt;Loads JPEG/mJPEG streams via url. Foscam owners can add a stream by inserting their ip/port and login. Stores all data locally and lets you easily wipe all data for privacy. Built using the Ionic Framework and PhoneGap.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://hgogonis.me/img/gplay.png&quot; alt=&quot;Get it on Google Play&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;technologies&quot;&gt;Technologies&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ionic&lt;/li&gt;
+  &lt;li&gt;AngularJS&lt;/li&gt;
+  &lt;li&gt;Android&lt;/li&gt;
+  &lt;li&gt;Cordova&lt;/li&gt;
+  &lt;li&gt;PhoneGap&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Mon, 03 Mar 2014 00:00:00 +0000</pubDate>
+        <link>http://yourdomain.com/app/android/2014/03/03/JICV.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/app/android/2014/03/03/JICV.html</guid>
+        
+        
+        <category>app/android</category>
+        
+      </item>
+    
+      <item>
+        <title>Project Sun</title>
+        <description>&lt;p&gt;A 2.5D Sidescroller in UE4&lt;/p&gt;
+
+&lt;iframe width=&quot;960&quot; height=&quot;540&quot; src=&quot;https://www.youtube.com/embed/u26hcLADR0g&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+</description>
+        <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+        <link>http://yourdomain.com/video%20game/2014/01/01/Project-Sun.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/video%20game/2014/01/01/Project-Sun.html</guid>
+        
+        
+        <category>video game</category>
+        
+      </item>
+    
+      <item>
+        <title>Greater Tampa Bay RPC</title>
+        <description>&lt;p&gt;A web page in Drupal&lt;/p&gt;
+</description>
+        <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+        <link>http://yourdomain.com/client/web/2013/01/01/Tampa-Bay-Concourse.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/client/web/2013/01/01/Tampa-Bay-Concourse.html</guid>
+        
+        
+        <category>client/web</category>
+        
+      </item>
+    
+  </channel>
+</rss>
