@@ -1,12 +1,12 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-# Skills
+## Skills
 
-### Programming Languages
+# Programming Languages
 
 * Python
 * Java
@@ -14,7 +14,7 @@ permalink: /about/
 * JavaScript
 * SQL
 
-## Frameworks  & Tools
+# Frameworks  & Tools
 * Apache Spark
 * Apache Hadoop
 * Unreal Engine 4
@@ -25,9 +25,9 @@ permalink: /about/
 * AngularJS
 * Ionic
 * Android SDK
+* SASS/LESS
 
-
-## Other
+# Other
 
 * Amazon EC2/S3
 * Git
@@ -36,11 +36,10 @@ permalink: /about/
 ---------------------
 
 
+# This site was build with:
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+* [Jekyll](https://jekyllrb.com/)
+* [Susy](http://susy.oddbird.net/)
+* [Markdown](https://daringfireball.net/projects/markdown/)
+* [Compass](http://compass-style.org/)
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)

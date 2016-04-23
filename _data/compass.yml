@@ -2,7 +2,7 @@
 require:
 - jekyll-compass
 - susy
-project_path: "/home/harry/Portfolio/"
+project_path: "/home/ubuntu/portfolio/"
 http_path: "/"
 css_dir: css
 sass_dir: _compass

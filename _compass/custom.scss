@@ -1,8 +1,8 @@
 @import 'susy';
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-$break-md: 640px;
-$break-lg:1140px;
+$break-md: 600px;
+$break-lg:960px;
 
 $color-dark: #28324e;
 $color-light: #FBA026; 
@@ -43,8 +43,15 @@ a {
 .wrapper {
   @include container;
 }
-.post-wrapper, .container {
+.post-wrapper {
   @include container(960px);
+}
+.container {
+  @include container(960px);
+  padding: 0.5em;
+  @media only screen and (min-width: $break-lg) {
+    padding: 0;
+  }
 }
 // Header
 .site-header {
@@ -66,7 +73,9 @@ a {
   margin-bottom: 0;
 }
 .post {
-  margin: 0 -30px;
+  @media only screen and (min-width: $break-md) {
+    margin: 0 -30px;
+  }
   padding: 2em 30px;
 }
 h2 .post-link {
@@ -146,9 +155,27 @@ ul.social {
   }
 }
 
+ul.gallery {
+  margin: 0 -15px;
+  @media only screen and (min-width: $break-md) {
+    margin: 0;
+  }
+  list-style:none;
+  text-align: center;
+  li {
+    margin-bottom: 1.5em;
+    img {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+  }
+}
+
 // Navbar links
 .site-nav .page-link {
-  color: #fff;
+  @media only screen and (min-width: 600px) {
+    color: #fff;
+  }
 }
 
 // Header description
