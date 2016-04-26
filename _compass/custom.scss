@@ -1,6 +1,6 @@
 @import 'susy';
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 $break-md: 600px;
 $break-lg:960px;
 
@@ -11,8 +11,12 @@ $color-links: #2969B0;
 /* ==============
  * Typography
  * ==============*/
-h1,h2 {
-  font-family: 'Montserrat', sans-serif;
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  color: $color-dark;
 }
 a {
   color:  $color-links;
@@ -55,7 +59,8 @@ a {
 }
 // Header
 .site-header {
-  background: url('/assets/bg.png');
+  //background: url('/assets/bg.png');
+  background: $color-dark;
   border-top: 5px solid darken($color-dark, 10%);
   color: #ccc;
 }
@@ -69,73 +74,76 @@ a {
 /* ========================= *
  *      Font page posts      *
 ** ========================= */
-.post-list > li {
-  margin-bottom: 0;
-}
-.post {
-  @media only screen and (min-width: $break-md) {
-    margin: 0 -30px;
+.post-list {
+  & > li {
+    margin-bottom: 0;
   }
-  padding: 2em 30px;
-}
-h2 .post-link {
-  font-size: 110%;
-  color: $color-links;
-  &:hover {
-    color: darken($color-links, 30%);
+  .post {
+    @media only screen and (min-width: $break-md) {
+      margin: 0 -30px;
+    }
+    padding: 2em 30px;
   }
-}
-.post-excerpt {
-  margin-top: 1.5em;
-}
-// Even Posts
-.post:nth-child(even) {
-  background: #EFEFEF;
+  h2 .post-link {
+    font-size: 110%;
+    color: $color-links;
+    &:hover {
+      color: darken($color-links, 30%);
+    }
+  }
+  .post-excerpt {
+    margin-top: 1.5em;
+  }
+  // Even Posts
+  .post:nth-child(even) {
+    background: #EFEFEF;
 
-  .post-image {
-    @media only screen and (min-width: $break-md) {
-      @include span(6 of 12 last);
+    .post-image {
+      @media only screen and (min-width: $break-md) {
+        @include span(6 of 12 last);
+      }
+    }
+    .post-excerpt {
+      text-align:center;
+      @media only screen and (min-width: $break-md) {
+        text-align:right;
+        @include span(5 of 12 first);
+      }
     }
   }
-  .post-excerpt {
-    text-align:center;
-    @media only screen and (min-width: $break-md) {
-      text-align:right;
-      @include span(5 of 12 first);
+  // Odd Posts
+  .post:nth-child(odd) {
+    .post-image {
+      @media only screen and (min-width: $break-md) {
+        @include span(6 of 12 first);
+      }
+    }
+    .post-excerpt {
+      text-align:center;
+      @media only screen and (min-width: $break-md) {
+        text-align:left;
+        @include span(5 of 12 last);
+      }
     }
   }
-}
-// Odd Posts
-.post:nth-child(odd) {
-  .post-image {
-    @media only screen and (min-width: $break-md) {
-      @include span(6 of 12 first);
-    }
+  .post-image img {
+      border-radius: 10px;
+      box-shadow: 0 0 3px 1px rgba(0,0,0,0.3);
+      width: 100%;
   }
-  .post-excerpt {
-    text-align:center;
-    @media only screen and (min-width: $break-md) {
-      text-align:left;
-      @include span(5 of 12 last);
-    }
-  }
-}
-.post-image img {
-    border-radius: 10px;
-    box-shadow: 0 0 3px 1px rgba(0,0,0,0.3);
-    width: 100%;
 }
 a.post-more {
   display:inline-block;
   margin-top: 1em;
   padding: 0.5em 1em;
-  color: $color-light;
-  border: 1px solid $color-light;
-  border-radius: 10px;
+  border-radius: 2px;
   transition: all .25s ease-in-out;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.10);
+  background: $color-light;
+  color: #fff;
   &:hover {
     text-decoration:none;
-    background: $color-light;
+    background: lighten($color-light,15%);
     color: #fff;
   }
 }
@@ -182,4 +190,76 @@ ul.gallery {
 .site-description {
   margin: 1.5em 0;
   line-height: 2em;
+}
+
+/* ========================= *
+ *      CSS Flexbox          *
+** ========================= */
+$gallery-divisions: 2;
+$gallery-gutter: 10px;
+$gallery-background: #ecf0f1;
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  .item {
+    flex: 0 1 auto;
+    width: 100%;
+    max-width: 960px/$gallery-divisions - 3 * $gallery-gutter;
+    margin-bottom: $gallery-gutter;
+    padding: $gallery-gutter;
+    background: $gallery-background;
+
+    @media all and (max-width: 1000px) {
+      max-width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  
+    &.full {
+      max-width: 100%;
+    }
+
+    &.double {
+      flex: 0 2 auto;
+    }
+    
+    .caption {
+      margin-top: $gallery-gutter;
+      & > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/* ========================= *
+ *      Pagination/Breadcrumbs          *
+** ========================= */
+.breadcrumbs {
+  display: inline-block;
+  padding: 0.7em;
+  margin-bottom: 1em;
+  padding-left: 0;
+
+  .item {
+    color: #999;
+    font-weight:bold;
+    &:last-child {
+      color: $color-dark;
+      font-weight: normal;
+    }
+  }
+
+  .divider {
+    width: 1em;
+    display: inline-block;
+    text-align: center;
+    color: #999
+  }
 }
