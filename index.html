@@ -5,11 +5,14 @@ layout: default
 <div class="home">
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in site.posts | limit:site.paginate %}
       <li class="post">
         <div class="post-wrapper">
           <div class="post-image">
             <a href="{{ post.url | prepend: site.baseurl }}">
+              <div class="post-overlay">
+                <span>View</span>
+              </div>
               <img src="{{ post.image }}" alt="{{post.title}}"/>
             </a>
           </div>
@@ -21,7 +24,7 @@ layout: default
 
             {{ post.excerpt}}
 
-            <a href="{{post.url | prepend: site.baseurl }}" class="post-more">read more</a>
+            <!-- <a href="{{post.url | prepend: site.baseurl }}" class="post-more">read more</a> -->
           </div>
         </div>
       </li>

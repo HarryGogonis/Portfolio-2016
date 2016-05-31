@@ -8,9 +8,9 @@ $color-dark: #28324e;
 $color-light: #FBA026; 
 $color-links: #2969B0;
 
-/* ==============
- * Typography
- * ==============*/
+/* ========================= *
+ *      Typography           *
+** ========================= */
 html, body {
   font-family: 'Roboto', sans-serif;
 }
@@ -31,6 +31,9 @@ a {
   text-align:center;
 }
 
+/* ========================= *
+ *      Containers           *
+** ========================= */
 .page-content {
   padding-bottom: 0;
 }
@@ -127,27 +130,41 @@ a {
     }
   }
   .post-image img {
-      border-radius: 10px;
-      box-shadow: 0 0 3px 1px rgba(0,0,0,0.3);
+      border-radius: 5px;
+      //box-shadow: 0 0 3px 1px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,0.20);
+
       width: 100%;
   }
-}
-a.post-more {
-  display:inline-block;
-  margin-top: 1em;
-  padding: 0.5em 1em;
-  border-radius: 2px;
-  transition: all .25s ease-in-out;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.10);
-  background: $color-light;
-  color: #fff;
-  &:hover {
-    text-decoration:none;
-    background: lighten($color-light,15%);
-    color: #fff;
+  .post-image a {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+  }
+  .post-image .post-overlay {
+    background: $color-light;
+    position:absolute;
+    opacity: 0;
+    transition: all .25s ease-in-out;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+
+    span {
+      color: #fff;
+      font-size: 2em;
+    }
+
+    &:hover {
+      opacity: 0.91;
+    }
   }
 }
-// =======================================================
 
 // Social media links in footer
 ul.social {
@@ -181,6 +198,8 @@ ul.gallery {
 
 // Navbar links
 .site-nav .page-link {
+  font-weight: 500;
+  text-transform: uppercase;
   @media only screen and (min-width: 600px) {
     color: #fff;
   }
@@ -188,13 +207,19 @@ ul.gallery {
 
 // Header description
 .site-description {
-  margin: 1.5em 0;
-  line-height: 2em;
+  margin: 1em 0;
 }
 
 /* ========================= *
  *      CSS Flexbox          *
 ** ========================= */
+
+.flexbox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
 $gallery-divisions: 2;
 $gallery-gutter: 10px;
 $gallery-background: #ecf0f1;
@@ -239,13 +264,14 @@ $gallery-background: #ecf0f1;
 }
 
 /* ========================= *
- *      Pagination/Breadcrumbs          *
+ *  Pagination/Breadcrumbs   *
 ** ========================= */
 .breadcrumbs {
   display: inline-block;
   padding: 0.7em;
   margin-bottom: 1em;
   padding-left: 0;
+  font-size: 85%;
 
   .item {
     color: #999;
@@ -262,4 +288,45 @@ $gallery-background: #ecf0f1;
     text-align: center;
     color: #999
   }
+}
+
+/* ========================= *
+ *          Buttons          *
+** ========================= */
+
+a.post-more, a.button-primary, a.button {
+  text-transform: uppercase;
+  display:inline-block;
+  text-decoration:none;
+  font-weight: 500;
+  margin-top: 1em;
+  padding: 0.5em 1.5em;
+  border-radius: 2px;
+  transition: all .25s ease-in-out;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.10);
+}
+
+a.post-more, a.button-primary {
+  background: $color-light;
+  color: #fff;
+  &:hover {
+    background: lighten($color-light,15%);
+    color: #fff;
+  }
+}
+
+a.button {
+  background: #fff;
+  color: #333;
+  &:hover {
+    background: #ccc;
+    color: #333;
+  }
+}
+
+/* ========================= *
+ *         Other             *
+** ========================= */
+.round-5 {
+  border-radius: 5px;
 }
