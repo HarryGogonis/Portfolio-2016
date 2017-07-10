@@ -1,0 +1,21 @@
+language: ruby
+rvm:
+- 2.3.3
+script: "./script/cibuild"
+branches:
+  only:
+  - gh-pages
+  - "/pages-(.*)/"
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+sudo: false
+deploy:
+  provider: s3
+  access_key_id: AKIAJ6XBQ2K2CUGMAVHQ
+  secret_access_key:
+    secure: IW/F7eqDTp2KRhpeVR89/3eWaWK/Kb7OX6mJnHHwuWE7gAQiuUkLWnfGfASCdWsPLuxmjrBtuCOq7dQlZG0aaCRyw70UPdXsBKBye+BgZWUMP0mgywT/bGaGPHFXP0pxb08dy7eIouRH6Ug5qcp/r1Gm/iyJoMgNZqgAyGR964viK3LAVQrBPrHvNO2Ds4Qi1p2RBEKBQ22e/xKq8E+beXzVmS35z2SlAbEHF8evxIuXpRT55TY1KDSIk+94ucyk2giBxqD9x64ix36C4jpPxTTKbsyZ1mD6grUUFSasBs6KFqNZPzMqyacraAYluujtH1t1w7tzBnNoSYld287sfaalBzFuDv3Dh2GSb0Y1/KzUVm3nuPmmXqz5SnmNtmRuy6WFpD/F6NSYVNeLyAFmVf0cH2FGvEc7CioEPw9At3IbsmEEt/JiOfrXlAw4VBXemJb/K9oWCoBN5hfr32fbzF8OM0zrfrjEWgqfQqHx4W3NOufARJUMJs4fMRuH13vSNYTEh+aOUtohR5uLc9ieNF/JAPu3kApgAnuAntRoQTYq3XtUWb86Z4HQ7HSCLCDco7PQ4f1wWK7HTtZjXiiXO7qRk0zrQhf40s22T0aezrY4EARJ3ezoo+ftn126Iw7unZWUq1LSS8nvPHFewQ83jSGqrbiudYwowTp7Eiwo0iY=
+  bucket: hgogonis.me
+  acl: public_read
+  on:
+    repo: HarryGogonis/Portfolio-2016
