@@ -1,7 +1,7 @@
 language: ruby
 rvm:
 - 2.3.3
-script: "./script/cibuild"
+script: "./scripts/cibuild"
 branches:
   only:
   - master
